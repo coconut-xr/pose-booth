@@ -93,7 +93,7 @@ function XRInputSource({ inputSource }: { inputSource: XRInputSource }) {
 
   useFrame(() => {
     if (isRecording){
-      downloadPose()
+      if (inputSource.handedness === "right") downloadPose()
       stopRecording()
     }
   });
