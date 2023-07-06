@@ -11,7 +11,6 @@ import {
 } from "@coconut-xr/natuerlich/react";
 import { getInputSourceId } from "@coconut-xr/natuerlich";
 import { XWebPointers } from "@coconut-xr/xinteraction/react";
-import Hand from "./src/Hand.js";
 import InfoPanel from "./src/components/InfoPanel.js";
 import { TouchHand } from "@coconut-xr/natuerlich/defaults";
 import { useMainStore } from "./src/states/MainStore.js";
@@ -100,11 +99,6 @@ function XRInputSource({ inputSource }: { inputSource: XRInputSource }) {
 
   return inputSource.hand != null ? (
     inputSource.handedness === "left" ? (
-      // <GrabHand
-      //   hand={inputSource.hand}
-      //   inputSource={inputSource}
-      //   id={getInputSourceId(inputSource)}
-      // />
       <TouchHand inputSource={inputSource} hand={inputSource.hand} id={getInputSourceId(inputSource)} />
     ) : (
       <TouchHand inputSource={inputSource} hand={inputSource.hand} id={getInputSourceId(inputSource)}/>

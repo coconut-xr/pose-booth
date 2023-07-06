@@ -9,7 +9,7 @@
   "dependencies": {
     "@coconut-xr/koestlich": "^0.0.16",
     "@coconut-xr/kruemel": "^0.0.6",
-    "@coconut-xr/natuerlich": "^0.0.6",
+    "@coconut-xr/natuerlich": "^0.0.14",
     "@react-three/fiber": "^8.13.3",
     "@types/three": "^0.152.1",
     "three": "^0.153.0",
