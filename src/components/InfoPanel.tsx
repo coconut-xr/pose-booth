@@ -75,7 +75,7 @@ export default function DebugPanel({ ...props }: GroupProps) {
       >
         <Button
           fontSize={fontSize}
-          backgroundColor={"pink"}
+          backgroundColor={"gray"}
           onClick={() => handleStartRecording()}
         >
           {`Start Capturing Pose ( ${counter} s )`}

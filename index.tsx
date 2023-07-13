@@ -14,6 +14,11 @@ import { XWebPointers } from "@coconut-xr/xinteraction/react";
 import InfoPanel from "./src/components/InfoPanel.js";
 import { TouchHand } from "@coconut-xr/natuerlich/defaults";
 import { useMainStore } from "./src/states/MainStore.js";
+import { ModernRoom } from "./src/components/Room.js";
+import { Environment } from "@react-three/drei";
+import { Apartment } from "./src/components/Apartment.js";
+import Background from "./src/components/Background.js";
+import { Flat } from "./src/components/Flat.js";
 
 const sessionOptions: XRSessionInit = {
   requiredFeatures: ["local-floor", "hand-tracking", "anchors"],
@@ -43,11 +48,16 @@ export default function Index() {
         style={{ width: "100vw", height: "100svh", touchAction: "none" }}
         events={() => ({ enabled: false, priority: 0 })}
       >
-        <ambientLight intensity={0.2} />
-        <directionalLight intensity={0.2} position={[1, 1, 1]} />
+        <ambientLight intensity={0.6} />
+        {/* <directionalLight intensity={0.2} position={[1, 1, 1]} /> */}
         <XR frameBufferScaling={frameBufferScaling} frameRate={frameRate} />
         <XWebPointers />
         <InputSources />
+        {/* <Environment blur={0} files="environment/city_day.hdr" background={true}/> */}
+        <Background />
+        {/* <ModernRoom scale={0.15} position={[0,0.05,0]}/> */}
+        {/* <Apartment scale={0.75} position={[0,0,0]}/> */}
+        <Flat scale={1.1} position={[-1,0,-1.5]}/>
         <InfoPanel position-y={1.5} position-z={-0.8} position-x={-0.4} rotation-x={- Math.PI / 8}/>
       </Canvas>
     </>
@@ -84,9 +94,9 @@ function XRInputSource({ inputSource }: { inputSource: XRInputSource }) {
     inputSource.handedness,
     (name, prevName) => {},
     {
-      fist: "poses/fist.handpose",
-      relax: "poses/relax.handpose",
-      point: "poses/point.handpose",
+      fist: "fist.handpose",
+      relax: "relax.handpose",
+      point: "point.handpose",
     }
   );
 

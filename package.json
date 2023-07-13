@@ -7,12 +7,13 @@
   },
   "type": "module",
   "dependencies": {
-    "@coconut-xr/koestlich": "^0.0.16",
+    "@coconut-xr/koestlich": "^0.1.5",
     "@coconut-xr/kruemel": "^0.0.6",
-    "@coconut-xr/natuerlich": "^0.0.14",
+    "@coconut-xr/natuerlich": "^0.0.18",
+    "@react-three/drei": "^9.78.2",
     "@react-three/fiber": "^8.13.3",
     "@types/three": "^0.152.1",
-    "three": "^0.153.0",
+    "three": "^0.154.0",
     "vite-plugin-mkcert": "^1.13.0",
     "zustand": "^4.3.8"
   },
