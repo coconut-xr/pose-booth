@@ -15,7 +15,7 @@ Before starting this tutorial, ensure that you have the following:
 ### 1.1. Clone the GitHub Template
 To get started, clone the PoseBooth GitHub template using the following command:
 
-```
+```zsh
 git clone https://github.com/coconut-xr/pose-booth.git
 cd pose-booth
 ```
@@ -23,13 +23,13 @@ cd pose-booth
 ### 1.2. Install Dependencies and Run the Development Server
 Next, install the project dependencies by running:
 
-```
+```zsh
 npm i
 ```
 
 Launch the development server by executing the following command:
 
-```
+```zsh
 npm run dev
 ```
 
@@ -45,8 +45,10 @@ On the website, find the „Enter AR“  or „Enter VR“ button, and click on 
 
 ### 2.3. Record Hand Poses
 
-You will find yourself in front of a button, that says „Start Recording Pose“ and a countdown. Click the button with your finger.
-When you hear the countdown counting down, hold your hands in the desired pose you want to record, whether it's a peace sign, thumbs-up, or any other gesture you wish to capture. (We already provide default hand poses within natuerlich). After five seconds you should hear a screenshot sound and a small toast, indicating the file is saved will pop up.
+You will find yourself in front of a button, that says „Start Recording Pose“ and a countdown.  
+Click the button with your finger.  
+When you hear the countdown counting down, hold your hands in the desired pose you want to record, whether it's a peace sign, thumbs-up, or any other gesture you wish to capture. (We already provide default hand poses within natuerlich).  
+After five seconds you should hear a screenshot sound and a small toast, indicating the file is saved will pop up.
 
 ## TODO Step 3: Retrieve Hand Poses
 
@@ -63,7 +65,7 @@ We will be using a Mac for developing, but we will link to all Windows resources
 - For macOS (recommended for M1 and M2):
   Follow the instructions in this link to install adb: <https://stackoverflow.com/questions/31374085/installing-adb-on-macos>
 
-  ```
+  ```zsh
   brew install android-platform-tools
   ```
 
@@ -75,10 +77,11 @@ We will be using a Mac for developing, but we will link to all Windows resources
 Connect your VR headset to your computer via USB cable.
 Put on your VR headset and accept any dialog that appears to grant USB debugging access to your computer.
 
-(Photo of dialog <https://vrlowdown.com/wp-content/uploads/2022/06/oculus-quest-2-link-cable-not-detected-2.jpg>)
+![Photo of Dialog]()
 
 Make sure you have turned on the USB connection dialogue in your „Developer“ Settings
- ( <https://vrlowdown.com/wp-content/uploads/2022/06/oculus-quest-2-link-cable-not-detected-1.jpg>)
+
+![Developer Settings](https://vrlowdown.com/wp-content/uploads/2022/06/oculus-quest-2-link-cable-not-detected-1.jpg)
 
 ## Step 4: Retrieve Hand Poses with adb and include them in your project
 
@@ -186,7 +189,9 @@ export default function Index() {
 }
 ```
 
-(Link to natuerlich docs <https://coconut-xr.github.io/natuerlich/#/./poses> )
+Check out the [natuerlich docs](https://coconut-xr.github.io/natuerlich/#/./poses) for mor information! 
 
-Conclusion:
+
+## Conclusion:  
+
 Congratulations! You've learned how to use PoseBooth to record hand poses and incorporate them into your own application. With this feature, you can enhance the user experience by allowing them to interact using various hand gestures. Experiment with different poses and create stunning immersive VR experiences. Happy coding!

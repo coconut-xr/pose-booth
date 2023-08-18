@@ -71,7 +71,7 @@ export default function DebugPanel({ ...props }: GroupProps) {
           <Glass
             minWidth={200}
             borderRadius={8}
-            padding={8}
+            padding={4}
             justifyContent="center"
           >
             <Button
@@ -80,6 +80,7 @@ export default function DebugPanel({ ...props }: GroupProps) {
               onClick={() => handleStartRecording()}
               flexDirection="row"
               alignItems="center"
+              borderRadius={4}
             >
               <Text>Start Capturing Pose ( </Text>
               <Text>{counter.toString()}</Text>
