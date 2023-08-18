@@ -1,5 +1,5 @@
 {
-  "name": "examples",
+  "name": "pose-booth",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite --host",
@@ -7,20 +7,20 @@
   },
   "type": "module",
   "dependencies": {
-    "@coconut-xr/koestlich": "^0.1.5",
-    "@coconut-xr/kruemel": "^0.0.6",
-    "@coconut-xr/natuerlich": "^0.0.18",
-    "@react-three/drei": "^9.78.2",
-    "@react-three/fiber": "^8.13.3",
-    "@types/three": "^0.152.1",
-    "three": "^0.154.0",
-    "vite-plugin-mkcert": "^1.13.0",
-    "zustand": "^4.3.8"
+    "@coconut-xr/apfel-kruemel": "^0.0.6",
+    "@coconut-xr/koestlich": "^0.3.9",
+    "@coconut-xr/natuerlich": "^0.0.26",
+    "@react-three/drei": "^9.80.3",
+    "@react-three/fiber": "^8.13.7",
+    "@types/three": "^0.155.0",
+    "three": "^0.155.0",
+    "vite-plugin-mkcert": "^1.16.0",
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.0.1",
-    "vite": "^4.0.4"
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.4",
+    "vite": "^4.4.9"
   }
 }

@@ -1,8 +1,8 @@
 import { RootContainer, Text } from "@coconut-xr/koestlich";
 import { GroupProps } from "@react-three/fiber";
-import { Button } from "@coconut-xr/kruemel";
 import { useState } from "react";
 import { useMainStore } from "../states/MainStore.js";
+import { Button, Glass } from "@coconut-xr/apfel-kruemel";
 export default function DebugPanel({ ...props }: GroupProps) {
   const fontSize = 0.05;
 
@@ -34,23 +34,23 @@ export default function DebugPanel({ ...props }: GroupProps) {
   const countdown = async () => {
     beep();
     await delay(1000);
-    setCounter(4)
+    setCounter(4);
     beep();
     await delay(1000);
-    setCounter(3)
+    setCounter(3);
     beep();
     await delay(1000);
-    setCounter(2)
+    setCounter(2);
     beep();
     await delay(1000);
-    setCounter(1)
+    setCounter(1);
     beep(0.3);
     await delay(1000);
-    setCounter(0)
+    setCounter(0);
     screenShot();
     startRecording();
     await delay(500);
-    setCounter(5)
+    setCounter(5);
   };
 
   const handleStartRecording = () => {
@@ -62,25 +62,32 @@ export default function DebugPanel({ ...props }: GroupProps) {
 
   return (
     <group {...props} rotation-y={0}>
-      <RootContainer
-        backgroundColor={"white"}
-        backgroundOpacity={0}
-        height={0.2}
-        width={0.7}
-        alignItems="center"
-        justifyContent="center"
-        padding={0.01}
-        overflow="visible"
-        flexDirection="column"
-      >
-        <Button
-          fontSize={fontSize}
-          backgroundColor={"gray"}
-          onClick={() => handleStartRecording()}
+      <group>
+        <RootContainer
+          dragThreshold={32}
+          position={[0, 1.6, -0.2]}
+          pixelSize={0.001}
         >
-          {`Start Capturing Pose ( ${counter} s )`}
-        </Button>
-      </RootContainer>
+          <Glass
+            minWidth={200}
+            borderRadius={8}
+            padding={8}
+            justifyContent="center"
+          >
+            <Button
+              style="rect"
+              size="md"
+              onClick={() => handleStartRecording()}
+              flexDirection="row"
+              alignItems="center"
+            >
+              <Text>Start Capturing Pose ( </Text>
+              <Text>{counter.toString()}</Text>
+              <Text> s )</Text>
+            </Button>
+          </Glass>
+        </RootContainer>
+      </group>
     </group>
   );
 }
