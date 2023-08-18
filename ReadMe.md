@@ -48,7 +48,7 @@ On the website, find the „Enter AR“  or „Enter VR“ button, and click on 
 You will find yourself in front of a button, that says „Start Recording Pose“ and a countdown. Click the button with your finger.
 When you hear the countdown counting down, hold your hands in the desired pose you want to record, whether it's a peace sign, thumbs-up, or any other gesture you wish to capture. (We already provide default hand poses within natuerlich). After five seconds you should hear a screenshot sound and a small toast, indicating the file is saved will pop up.
 
-## Step 3: Retrieve Hand Poses
+## TODO Step 3: Retrieve Hand Poses
 
 ### 3.1. Locate the Saved Hand Poses
 
@@ -84,14 +84,14 @@ Make sure you have turned on the USB connection dialogue in your „Developer“
 
 ### 4.1. Launch adb
 
-- For macOS:
+For macOS:
   Open a terminal window and run the following command:
 
-  ```
-  adb devices
-  ```
+```zsh
+adb devices
+```
 
-  This should automatically open a window where you can access the "Downloads" folder on your VR headset.
+This should automatically open a window where you can access the "Downloads" folder on your VR headset.
 (Screenshot)
 
 ### 4.2. Copy Hand Poses to Your Project
@@ -100,7 +100,7 @@ Locate the "untitled.handpose" files or any other poses you recorded in the Pose
 
 ### 4.3. Rename and Include Hand Poses in Your Code
 
-Rename each file according to the pose it represents (e.g., thumbsUp.handpose). Include these hand poses in your application's code using the useHandPoses hook.  
+Rename each file according to the pose it represents (e.g., thumbsUp.handpose). Include these hand poses in your application's code using the useHandPoses hook.
 (Code)
 
 ```tsx
@@ -190,4 +190,3 @@ export default function Index() {
 
 Conclusion:
 Congratulations! You've learned how to use PoseBooth to record hand poses and incorporate them into your own application. With this feature, you can enhance the user experience by allowing them to interact using various hand gestures. Experiment with different poses and create stunning immersive VR experiences. Happy coding!
-
