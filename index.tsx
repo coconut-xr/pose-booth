@@ -50,7 +50,7 @@ export default function Index() {
         <NonImmersiveCamera position={[0, 1.6, 0.3]} />
         <ImmersiveSessionOrigin position={[0, 0, 0]}>
           <DownloadRightHandPose />
-          <Hands />
+          <Hands type="touch" />
         </ImmersiveSessionOrigin>
         <InfoPanel />
       </XRCanvas>
