@@ -1,4 +1,4 @@
-# 🚧 Recording and Using Hand Poses in VR 🤙🏼 - PoseBooth Tutorial with Natuerlich 🚧
+# Recording and Using Hand Poses in VR 🤙🏼 - PoseBooth Tutorial with Natuerlich
 
 
 <img src="./docs/images/banner2.png" width="60%"> <img src="./docs/images/poses.gif" width="33.8%">
@@ -6,7 +6,7 @@
 
 ## Introduction:
 
-In this short tutorial we will explore PoseBooth, a helpful tool that allows you to record hand poses, which can later be included in your own applications with `@coconut-xr/natuerlich`. With **PoseBooth** you can easily capture hand gestures of any pose you like and use them in your projects. We'll guide you through the process of recording handposes with PoseBooth, getting them from your VR/AR device onto your computer, and incorporating them into your applications!
+In this short tutorial, we will explore PoseBooth, a helpful tool that allows you to record hand poses, which can later be included in your own applications with @coconut-xr/natuerlich. With PoseBooth, you can easily capture hand gestures of any pose you like and use them in your projects. We'll guide you through the process of recording hand poses with PoseBooth, getting them from your VR/AR device onto your computer, and incorporating them into your applications!
 
 ## Prerequisites 📝
 
@@ -28,7 +28,7 @@ You should already see the recording button and two buttons to start a session i
 
 ## Step 2: Start the PoseBooth Session 🚀
 
-Click on the „AR“  or „VR“ button to enter the PoseBooth...
+Click the „AR“  or „VR“ button to enter the PoseBooth...
 
 ...and throw away your controllers! 🤾🏼
 
@@ -36,46 +36,45 @@ Click on the „AR“  or „VR“ button to enter the PoseBooth...
 
 ## Step 3: Record Hand Poses 👌🏼
 
-You will find yourself in front of a button, that says „Start Recording Pose“ and you see a countdown (5s).  
-
+You will find yourself in front of a button that says „Start Recording Pose“ and you see a countdown (5s).  
 Click the button with your finger!  
 
 When you hear the countdown counting down, hold your hands in the desired pose you want to record, whether it's a peace sign, thumbs-up, or any other gesture you wish to capture.  
 
 *>> We already provide default hand poses within @coconut-xr/natuerlich!*
 
-*Technically you only need your right hand, because the pose gets mirrored to your left hand, but that's not relevant* 😁 
+*Technically, you only need your right hand because the pose gets mirrored to your left hand, but that's not relevant* 😁 
 *More details [here](https://coconut-xr.github.io/natuerlich/#/./poses)* 🤫
 
-After five seconds you should hear a screenshot sound and a small toast indicating the file has been saved will pop up 📸
+After five seconds, you should hear a screenshot sound and a small toast indicating the file has been saved will pop up 📸
 
 ## Step 4: Retrieve Hand Poses 💻
 
 ### 4.1. Locate the Saved Hand Poses
 
-After recording the hand pose a file named "untitled.handpose" will be saved to your VR headset's "Downloads" folder.
+After recording the hand pose, a file named "untitled.handpose" will be saved to your VR headset's "Downloads" folder.
 
 ***But how do we get access to it?!***
 
 ### 4.2 Connect your headset to your computer
 
-Take a cable of your choice and connect your device to you computer.
+Take a cable of your choice and connect your device to your computer.
 
 #### Windows
 
-On windows it should be easy!  
+On Windows, it should be easy!  
 The device should become instantly available through your file browser!  
 Locate the "Downloads" folder and copy the files to your computer.
 
 #### Mac
 
-On Mac it's a bit trickier.  
-We found the [Android File Transfer](https://www.android.com/filetransfer/) tool very helpful to access the files from our device.  
-If everything is set up correctly, you should also be able to locate the "Downloads" folder and copy the files to your computer.
+On Mac, it's a bit trickier.  
+We found the [Android File Transfer](https://www.android.com/filetransfer/) tool very helpful in accessing the files from our device.  
+If everything is set up correctly, you should also locate the "Downloads" folder and copy the files to your computer.
 
 ![Download Folder](./docs/images/downloads.png)
 
-And your done! Now lets incorporate them in your natuerlich project! 👷🏼
+And you're done! Now, let's incorporate them into your natuerlich project! 👷🏼
 
 ## Step 5: Including Hand Poses in your Project 🧑🏼‍💻
 
@@ -152,7 +151,7 @@ You can now use the poses to trigger events or do something else with them in yo
 ## Conclusion 🎉
 
 Congratulations!  
-You've learned how to use PoseBooth to record hand poses and incorporate them into your own application. With this feature, you can enhance the user experience by allowing them to interact using various hand gestures. Experiment with different poses and create stunning immersive VR experiences. Happy coding!
+You've learned how to use PoseBooth to record hand poses and incorporate them into your own application. With this feature, you can enhance the user experience by allowing them to interact using various hand gestures. Experiment with different poses and create stunning, immersive VR experiences. Happy coding!
 
 ### Links
 
