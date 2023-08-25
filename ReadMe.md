@@ -1,148 +1,120 @@
-# TDOD:  Recording and Using Hand Poses in VR - PoseBooth Tutorial with natuerlich
+# 🚧 Recording and Using Hand Poses in VR 🤙🏼 - PoseBooth Tutorial with Natuerlich 🚧
 
-Introduction:
-In this tutorial, we will explore PoseBooth, a template that allows you to record hand poses, which can later be included in your own applications with natuerlich. With PoseBooth, you can easily capture hand gestures of any pose you like, and use them in your projects. We'll guide you through the process of setting up PoseBooth, recording hand poses, and incorporating them into your applications.
 
-## Prerequisites:
+<img src="./docs/images/banner2.png" width="60%"> <img src="./docs/images/poses.gif" width="33.8%">
+
+
+## Introduction:
+
+In this short tutorial we will explore PoseBooth, a helpful tool that allows you to record hand poses, which can later be included in your own applications with @coconut-xr/natuerlich. With PoseBooth you can easily capture hand gestures of any pose you like and use them in your projects. We'll guide you through the process of recording handposes with PoseBooth, getting them from your VR/AR device onto your computer, and incorporating them into your applications!
+
+## Prerequisites 📝
 
 Before starting this tutorial, ensure that you have the following:
 
-1. A VR headset that supports hand tracking.
-2. Basic knowledge with react-three-fiber.
+1. A VR/AR headset that supports hand tracking. (e.g. Quest 2 or Quest Pro)
+2. Meta Quest Developer Hub
 
-## Step 1: Set up PoseBooth Project
+## Step 1: Go on the PoseBooth Website 📷
 
-### 1.1. Clone the GitHub Template
-To get started, clone the PoseBooth GitHub template using the following command:
+PoseBooth is hosted under [PoseBoothDeployedLink]().  
+Access the website with your VR / AR Device!  
+You should already see the recording button and two buttons to start a session in VR or AR.
 
-```zsh
-git clone https://github.com/coconut-xr/pose-booth.git
-cd pose-booth
-```
+![Image Deployed Website](./docs/images/banner.png)
 
-### 1.2. Install Dependencies and Run the Development Server
-Next, install the project dependencies by running:
+*If you access the website with a non-hand tracking device, you will see the message "No right hand found for capturing".*
 
-```zsh
-npm i
-```
+## Step 2: Start the PoseBooth Session 🚀
 
-Launch the development server by executing the following command:
+Click on the „Enter AR“  or „Enter VR“ button to enter the PoseBooth.  
 
-```zsh
-npm run dev
-```
+And throw away your controllers! 🤾🏼
 
-## Step 2: Prepare VR Environment
+*Only hands are allowed here!* 😉
 
-### 2.1. Access Your Local Development Website on VR Device
+## Step 3: Record Hand Poses 👌🏼
 
-Put on your VR headset and access your locally running PoseBooth site. Ensure that your VR device is connected to the same network as your development machine.
+You will find yourself in front of a button, that says „Start Recording Pose“ and you see a countdown (5s).  
+Click the button with your finger!  
 
-### 2.2. Start PoseBooth Session
+When you hear the countdown counting down, hold your hands in the desired pose you want to record, whether it's a peace sign, thumbs-up, or any other gesture you wish to capture.  
 
-On the website, find the „Enter AR“  or „Enter VR“ button, and click on it to enter the PoseBooth. And throw away your controllers!
+*We already provide default hand poses within @coconut-xr/natuerlich*
 
-### 2.3. Record Hand Poses
+*Technically you only need your right hand, because the pose gets mirrored to your left hand, but that's not relevant* 😁 
+ *More details [here](https://coconut-xr.github.io/natuerlich/#/./poses)* 🤫
 
-You will find yourself in front of a button, that says „Start Recording Pose“ and a countdown.  
-Click the button with your finger.  
-When you hear the countdown counting down, hold your hands in the desired pose you want to record, whether it's a peace sign, thumbs-up, or any other gesture you wish to capture. (We already provide default hand poses within natuerlich).  
-After five seconds you should hear a screenshot sound and a small toast, indicating the file is saved will pop up.
+After five seconds you should hear a screenshot sound and a small toast indicating the file has been saved will pop up 📸
 
-## TODO Step 3: Retrieve Hand Poses
+## Step 4: Retrieve Hand Poses 💻
 
-### 3.1. Locate the Saved Hand Poses
+### 4.1. Locate the Saved Hand Poses
 
-After recording the hand pose, a file named "untitled.handpose" will be saved to your VR headset's download folder. But how do we get access to it?
+After recording the hand pose a file named "untitled.handpose" will be saved to your VR headset's "Downloads" folder.
 
-### 3.2. Install Android Debug Bridge (adb)
+But how do we get access to it?
 
-To retrieve the hand poses from your VR headset, you'll need to have Android Debug Bridge (adb) installed on your computer.
+### 4.2 Connect your headset to your computer
 
-We will be using a Mac for developing, but we will link to all Windows resources for installing and using adb
+Take a cable of your choice and connect your device to you computer.
 
-- For macOS (recommended for M1 and M2):
-  Follow the instructions in this link to install adb: <https://stackoverflow.com/questions/31374085/installing-adb-on-macos>
+#### Windows
 
-  ```zsh
-  brew install android-platform-tools
-  ```
+On windows it should be easy!  
+The device should become instantly available through your file browser!  
+Locate the "Downloads" folder and copy the files to your computer.
 
-- For Windows:
-  Download adb from the official Android Developer website: <https://developer.android.com/tools/releases/platform-tools>
+#### Mac
 
-### 3.3. Connect VR Headset to PC and Accept the Dialog on Your VR Headset
+On Mac it's a bit trickier.  
+We found the [Android File Transfer](https://www.android.com/filetransfer/) tool very helpful to access the files from our device.  
+If everything is set up correctly, you should also locate the "Downloads" folder and copy the files to your computer.
 
-Connect your VR headset to your computer via USB cable.
-Put on your VR headset and accept any dialog that appears to grant USB debugging access to your computer.
+![Download Folder](./docs/images/downloads.png)
 
-![Photo of Dialog]()
+And your done! Now lets incorporate them in your natuerlich project! 👷🏼
 
-Make sure you have turned on the USB connection dialogue in your „Developer“ Settings
+## Step 5: Including Hand Poses in your Project 🧑🏼‍💻
 
-![Developer Settings](https://vrlowdown.com/wp-content/uploads/2022/06/oculus-quest-2-link-cable-not-detected-1.jpg)
+### 5.1. Copy Hand Poses
 
-## Step 4: Retrieve Hand Poses with adb and include them in your project
+We just downloaded all your recorded hand poses to your computer. Now you just have to copy these files to your project's public folder 📁
 
-### 4.1. Launch adb
+### 5.2. Rename and Include Hand Poses in Your Code
 
-For macOS:
-  Open a terminal window and run the following command:
+Rename each file according to the pose it represents (e.g., thumbsUp.handpose). Include these hand poses in your application's code using the `useHandPoses` hook.
+For more information on this hook, see the [natuerlich documentation](https://coconut-xr.github.io/natuerlich/#/./poses).
 
-```zsh
-adb devices
-```
-
-This should automatically open a window where you can access the "Downloads" folder on your VR headset.
-(Screenshot)
-
-### 4.2. Copy Hand Poses to Your Project
-
-Locate the "untitled.handpose" files or any other poses you recorded in the PoseBooth. Copy these files to your project's public folder.
-
-### 4.3. Rename and Include Hand Poses in Your Code
-
-Rename each file according to the pose it represents (e.g., thumbsUp.handpose). Include these hand poses in your application's code using the useHandPoses hook.
-(Code)
+Here is a short excerpt from the code on how you should insert it:
 
 ```tsx
-import { XRCanvas } from "@coconut-xr/natuerlich/defaults";
 import { getInputSourceId } from "@coconut-xr/natuerlich";
-import { useState } from "react";
 import {
-  useEnterXR,
-  NonImmersiveCamera,
   ImmersiveSessionOrigin,
   useInputSources,
   useHandPoses
 } from "@coconut-xr/natuerlich/react";
-import { RootContainer, Text } from "@coconut-xr/koestlich";
-
-const sessionOptions: XRSessionInit = {
-  requiredFeatures: ["local-floor", "hand-tracking"]
-};
+...
 
 export function PoseHand({
   hand,
   inputSource,
-  setPoseNames
 }: {
   hand: XRHand;
   inputSource: XRInputSource;
-  setPoseNames: (names: string) => void;
 }) {
   useHandPoses(
     hand,
     inputSource.handedness,
     (name, prevName) => {
       console.log(name, prevName);
-      setPoseNames(`${name}, ${prevName}`);
     },
     {
       fist: "fist.handpose",
       relax: "relax.handpose",
-      point: "point.handpose"
+      point: "point.handpose",
+      yourPose: "yourPose.handpose"
     }
   );
 
@@ -150,48 +122,34 @@ export function PoseHand({
 }
 
 export default function Index() {
-  const enterAR = useEnterXR("immersive-ar", sessionOptions);
+  ... 
   const inputSources = useInputSources();
-  const [leftPoseNames, setLeftPoseNames] = useState("none");
-  const [rightPoseNames, setRightPoseNames] = useState("none");
   return (
-    <div
-      style={{...}}
-    >
-      <button onClick={enterAR}>Enter AR</button>
-      <XRCanvas>
-        <group position={[0, 1.5, 0]}>
-          <RootContainer anchorX="center" anchorY="center">
-            <Text>{`Left: ${leftPoseNames}`}</Text>
-            <Text>{`Right: ${rightPoseNames}`}</Text>
-          </RootContainer>
-        </group>
-        <NonImmersiveCamera position={[0, 1.5, 4]} />
-        <ImmersiveSessionOrigin position={[0, 0, 4]}>
-          {inputSources.map((inputSource) =>
-            inputSource.hand != null ? (
-              <PoseHand
-                setPoseNames={
-                  inputSource.handedness === "left"
-                    ? setLeftPoseNames
-                    : setRightPoseNames
-                }
-                key={getInputSourceId(inputSource)}
-                inputSource={inputSource}
-                hand={inputSource.hand}
-              />
-            ) : null
-          )}
-        </ImmersiveSessionOrigin>
-      </XRCanvas>
+    <div style={{...}}>
+    ...
+      <ImmersiveSessionOrigin position={[0, 0, 4]}>
+        {inputSources.map((inputSource) =>
+          inputSource.hand != null ? (
+            <PoseHand
+              key={getInputSourceId(inputSource)}
+              inputSource={inputSource}
+              hand={inputSource.hand}
+            />
+          ) : null
+        )}
+      </ImmersiveSessionOrigin>
+      ... 
     </div>
   );
 }
 ```
 
-Check out the [natuerlich docs](https://coconut-xr.github.io/natuerlich/#/./poses) for mor information! 
+## Conclusion 🎉
 
+Congratulations!  
+You've learned how to use PoseBooth to record hand poses and incorporate them into your own application. With this feature, you can enhance the user experience by allowing them to interact using various hand gestures. Experiment with different poses and create stunning immersive VR experiences. Happy coding!
 
-## Conclusion:  
+### Links
 
-Congratulations! You've learned how to use PoseBooth to record hand poses and incorporate them into your own application. With this feature, you can enhance the user experience by allowing them to interact using various hand gestures. Experiment with different poses and create stunning immersive VR experiences. Happy coding!
+Check out the [natuerlich docs](https://coconut-xr.github.io/natuerlich/#/./poses) for more information!  
+Or check out [koestlich](https://coconut-xr.github.io/koestlich/#/) and [apfel-kruemel 🍏](https://github.com/coconut-xr/apfel-kruemel) and learn how we created the button UI easily in this tutorial!
