@@ -19,7 +19,7 @@ function playBeep(playbackRate: number = 1) {
   beepSound.play();
 }
 
-const screenshotSound = new Audio("/sounds/iphone-screenshot.mp3");
+const screenshotSound = new Audio("/pose-booth/sounds/iphone-screenshot.mp3");
 
 function playScreenShot() {
   screenshotSound.currentTime = 0;
